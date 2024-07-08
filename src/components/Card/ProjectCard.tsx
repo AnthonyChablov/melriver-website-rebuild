@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import gsap from "gsap";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import HeaderText from "../Text/HeaderText";
@@ -19,8 +21,19 @@ const ProjectCard = ({
   headerText,
   paragraphText,
 }: ProjectCardProps) => {
+  const projectCard = useRef(null);
+  const onMouseEnter = () => {};
+  const onMouseLeave = () => {};
+
   return (
-    <Link href={linkUrl} passHref target="_blank">
+    <Link
+      ref={projectCard}
+      href={linkUrl}
+      passHref
+      target="_blank"
+      onMouseEnter={() => onMouseEnter}
+      onMouseLeave={() => onMouseLeave}
+    >
       <div className="relative rounded-2xl overflow-hidden">
         <Image
           src={imageUrl}
@@ -42,7 +55,7 @@ const ProjectCard = ({
             text={headerText}
             className="text-white font-medium"
           />
-          <Spacer spaceingAmount="1" />
+          <Spacer spaceingAmount={1} />
           <ParagraphText
             text={paragraphText}
             className="text-zinc-500 font-bold"

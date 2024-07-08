@@ -28,7 +28,7 @@ const Carousel = ({ children }: CarouselProps) => {
           visibility: `hidden`,
         },
         {
-          duration: 14,
+          duration: 25,
           visibility: `visible`,
           ease: "none",
           x: "-=300%", //move each box 500% to right
