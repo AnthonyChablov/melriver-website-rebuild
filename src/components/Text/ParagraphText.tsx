@@ -8,12 +8,10 @@ interface ParagraphTextProps {
   children?: React.ReactNode;
 }
 
-const ParagraphText = ({
-  mode = "md",
-  text,
-  children,
-  className,
-}: ParagraphTextProps) => {
+const ParagraphText = React.forwardRef<
+  HTMLParagraphElement,
+  ParagraphTextProps
+>(({ mode = "md", text, children, className }, ref) => {
   let modeClass = "";
 
   switch (mode) {
@@ -43,10 +41,11 @@ const ParagraphText = ({
   }
 
   return (
-    <p className={cn(`${modeClass} ${className}`)}>
+    <p ref={ref} className={cn(`${modeClass} ${className}`)}>
       {text} {children}
     </p>
   );
-};
+});
 
+ParagraphText.displayName = "ParagraphText";
 export default ParagraphText;
