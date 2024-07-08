@@ -24,12 +24,12 @@ const ContentCard: React.FC<ContentCardProps> = ({
   children,
 }) => {
   return (
-    <Card>
+    <Card className="rounded-2xl ">
       <div className="text-center ">
         <HeaderText
           text={title}
           mode="h2"
-          className="text-md py-4 font-medium"
+          className="text-md py-6 font-semibold"
         />
       </div>
       <CardContent>{children}</CardContent>

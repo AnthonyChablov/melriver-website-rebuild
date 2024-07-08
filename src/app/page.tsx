@@ -4,6 +4,8 @@ import Spacer from "@/components/Spacer";
 import ProjectCard from "@/components/Card/ProjectCard";
 import hillsMadeProjectImg from "./../../public/hills-made-project.png";
 import ContentCard from "@/components/Card/ContentCard";
+import Container from "@/components/Container";
+import Carousel from "./Carousel";
 
 const projectData = [
   {
@@ -16,35 +18,40 @@ const projectData = [
 
 export default function Home() {
   return (
-    <main className="container">
-      <section className="flex flex-col items-center justify-center text-center">
-        <Spacer spaceingAmount="2" />
-        <HeaderText
-          text="We build outstanding brands."
-          className="text-5xl font-medium"
-        />
-        <Spacer />
-        <ParagraphText
-          className="font-medium"
-          text="We craft outstanding direct-to-consumer brands with the common ambition to offer true craftsmanship, timeless products that are carbon neutral – and this without ever making any concessions."
-        />
-      </section>
-      <Spacer spaceingAmount="8" />
-      <section className="flex flex-col items-center justify-center text-center">
-        {projectData.map((project, index) => (
-          <ProjectCard
-            key={index}
-            imageUrl={project.imageUrl}
-            linkUrl={project.linkUrl}
-            headerText={project.headerText}
-            paragraphText={project.paragraphText}
+    <main className="flex flex-col items-center justify-center text-center">
+      <Container>
+        <section className="">
+          <Spacer spaceingAmount="2" />
+          <HeaderText
+            text="We build outstanding brands."
+            className="text-5xl font-medium"
           />
-        ))}
-      </section>
-      <Spacer />
-      <section className="">
-        <ContentCard title={"Featured In"} />
-      </section>
+          <Spacer />
+          <ParagraphText
+            className="font-medium"
+            text="We craft outstanding direct-to-consumer brands with the common ambition to offer true craftsmanship, timeless products that are carbon neutral – and this without ever making any concessions."
+          />
+        </section>
+        <Spacer spaceingAmount="8" />
+        <section className="">
+          {projectData.map((project, index) => (
+            <ProjectCard
+              key={index}
+              imageUrl={project.imageUrl}
+              linkUrl={project.linkUrl}
+              headerText={project.headerText}
+              paragraphText={project.paragraphText}
+            />
+          ))}
+        </section>
+        <Spacer />
+        <section className="">
+          <ContentCard title={"Featured In"}>
+            {/*           <Carousel />
+             */}
+          </ContentCard>
+        </section>
+      </Container>
     </main>
   );
 }

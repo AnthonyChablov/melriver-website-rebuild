@@ -32,6 +32,7 @@ const ProjectCard = ({
         />
         {/* Faded Overlay */}
         <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+        {/* Card Content */}
         <div className="absolute top-7 right-5">
           <Image src={linkIcon} alt="Link Icon" />
         </div>
