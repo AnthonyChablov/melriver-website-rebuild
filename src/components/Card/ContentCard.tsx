@@ -24,24 +24,24 @@ const ContentCard: React.FC<ContentCardProps> = ({
   children,
 }) => {
   return (
-    <Card className="rounded-2xl ">
-      <div className="text-center ">
+    <Card className="rounded-3xl shadow-sm">
+      <div className="text-center px-3 sm:container sm:px-10 sm:max-w-2xl">
         {title && (
           <HeaderText
             text={title}
             mode="h2"
-            className="text-md py-6 font-semibold"
+            className="text-md py-6 font-semibold "
           />
         )}
         {description && (
           <ParagraphText
             text={description}
             mode="2xl"
-            className="font-semibold"
+            className="font-semibold max-w-sm sm:max-w-md sm:text-3xl mx-auto "
           />
         )}
       </div>
-      <CardContent>{children}</CardContent>
+      <CardContent className="p-4 pb-14">{children}</CardContent>
       {footer && <CardFooter>{footer}</CardFooter>}
     </Card>
   );

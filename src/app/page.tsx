@@ -5,7 +5,8 @@ import ProjectCard from "@/components/Card/ProjectCard";
 import hillsMadeProjectImg from "./../../public/hills-made-project.png";
 import ContentCard from "@/components/Card/ContentCard";
 import Container from "@/components/Container";
-import Carousel from "./_components/Carousel";
+import Info from "./_components/Info";
+import { sustainabilityData } from "./_lib/data";
 
 const projectData = [
   {
@@ -21,18 +22,18 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center text-center">
       <Container>
         <section className="">
-          <Spacer spaceingAmount="2" />
+          <Spacer spaceingAmount={2} />
           <HeaderText
             text="We build outstanding brands."
             className="text-5xl font-medium"
           />
-          <Spacer />
+          <Spacer spaceingAmount={4} />
           <ParagraphText
             className="font-medium"
             text="We craft outstanding direct-to-consumer brands with the common ambition to offer true craftsmanship, timeless products that are carbon neutral – and this without ever making any concessions."
           />
         </section>
-        <Spacer spaceingAmount="6" />
+        <Spacer spaceingAmount={8} />
         <section className="">
           {projectData.map((project, index) => (
             <ProjectCard
@@ -44,20 +45,32 @@ export default function Home() {
             />
           ))}
         </section>
-        <Spacer spaceingAmount="6" />
+        <Spacer spaceingAmount={6} />
         <section className="">
           <ContentCard title={"Featured In"}>
             {/*           <Carousel />
              */}
           </ContentCard>
         </section>
-        <Spacer spaceingAmount="6" />
+        <Spacer spaceingAmount={6} />
         <section className="">
           <ContentCard
             title={"Sustainability"}
             description="A balance between social, environmental and financial interests."
           >
-            123
+            <Spacer spaceingAmount={4} />
+            <div className="flex flex-col xs:grid xs:grid-cols-2 gap-x-5 gap-y-4 ">
+              {sustainabilityData.map((item, index) => (
+                <Info
+                  key={item.id}
+                  title={item.stat}
+                  description={item.description}
+                  className={
+                    index === sustainabilityData.length - 1 ? "col-span-2" : ""
+                  }
+                />
+              ))}
+            </div>
           </ContentCard>
         </section>
       </Container>
