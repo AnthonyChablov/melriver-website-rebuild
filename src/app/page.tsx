@@ -7,6 +7,7 @@ import ContentCard from "@/components/Card/ContentCard";
 import Container from "@/components/Container";
 import Info from "./_components/Info";
 import { sustainabilityData } from "./_lib/data";
+import RenderCarousel from "./_components/RenderCarousel";
 
 const projectData = [
   {
@@ -48,8 +49,7 @@ export default function Home() {
         <Spacer spaceingAmount={6} />
         <section className="">
           <ContentCard title={"Featured In"}>
-            {/*           <Carousel />
-             */}
+            <RenderCarousel />
           </ContentCard>
         </section>
         <Spacer spaceingAmount={6} />

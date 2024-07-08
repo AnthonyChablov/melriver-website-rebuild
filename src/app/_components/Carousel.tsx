@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
+import gsap, { Power2 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
@@ -10,24 +10,48 @@ gsap.registerPlugin(ScrollTrigger);
 // Define props for the Carousel component
 interface CarouselProps {
   children: React.ReactNode;
-  selector: string; // Selector for gsap.to() target
 }
 
-const Carousel = <T extends HTMLElement>({
-  children,
-  selector,
-}: CarouselProps) => {
-  const carousel = useRef();
+const Carousel = ({ children }: CarouselProps) => {
+  const carousel = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
-      // gsap code here...
-      gsap.to(".box", { x: 360 }); // <-- automatically reverted
+      const tl = gsap.timeline({ repeat: -1, paused: true });
+      const wrap = gsap.utils.wrap(-100, 200);
+
+      tl.fromTo(
+        carousel.current,
+        {
+          ease: "none",
+          x: "120%",
+          visibility: `hidden`,
+        },
+        {
+          duration: 14,
+          visibility: `visible`,
+          ease: "none",
+          x: "-=300%", //move each box 500% to right
+          modifiers: {
+            y: gsap.utils.unitize(wrap), //force y value to wrap when it reaches -100
+          },
+        }
+      );
+
+      tl.play(); // Start the timeline to make it infinite
+
+      return () => {
+        tl.kill(); // Cleanup: kill the animation on unmount
+      };
     },
     { scope: carousel }
-  ); // <-- scope is for selector text (optional)
+  );
 
-  return <div ref={carousel}>{children}</div>;
+  return (
+    <div ref={carousel} className="space-x-12 invisible flex ">
+      {children}
+    </div>
+  );
 };
 
 export default Carousel;
