@@ -6,7 +6,7 @@ import Spacer from "./Spacer";
 const Footer = () => {
   return (
     <footer className="">
-      <Spacer spaceingAmount="6" />
+      <Spacer spaceingAmount={6} />
       <Container className="text-left">
         <ParagraphText
           className="font-bold"
@@ -19,7 +19,7 @@ const Footer = () => {
           text="‍No cookie Policy. No privacy policy."
         />
       </Container>
-      <Spacer spaceingAmount="6" />
+      <Spacer spaceingAmount={4} />
     </footer>
   );
 };
