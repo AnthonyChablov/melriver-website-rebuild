@@ -111,7 +111,7 @@ const ProjectCard = ({
           alt="Project Image"
           layout="responsive"
           width={400}
-          height={300}
+          height={400}
           className="object-cover"
         />
         {/* Faded Overlay */}
@@ -130,7 +130,7 @@ const ProjectCard = ({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               clip-rule="evenodd"
               d="M38.5858 2L1.41422 2V0H41.4142V2V42H39.4142V4L1.41422 42L0 40.5858L38.5858 2Z"
             />

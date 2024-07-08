@@ -2,21 +2,12 @@ import HeaderText from "@/components/Text/HeaderText";
 import ParagraphText from "@/components/Text/ParagraphText";
 import Spacer from "@/components/Spacer";
 import ProjectCard from "@/components/Card/ProjectCard";
-import hillsMadeProjectImg from "./../../public/hills-made-project.png";
+import { studioProjectData } from "./_lib/data";
 import ContentCard from "@/components/Card/ContentCard";
 import Container from "@/components/Container";
 import Info from "./_components/Info";
 import { sustainabilityData } from "./_lib/data";
 import RenderCarousel from "./_components/RenderCarousel";
-
-const projectData = [
-  {
-    imageUrl: hillsMadeProjectImg,
-    linkUrl: "https://hillsmade.com/?ref=melriver",
-    headerText: "Hills",
-    paragraphText: "hillsmade.com",
-  },
-];
 
 export default function Home() {
   return (
@@ -37,7 +28,7 @@ export default function Home() {
         <div className=" md:w-5/12  ">
           <Spacer spaceingAmount={8} className="md:hidden" />
           <section className="">
-            {projectData.map((project, index) => (
+            {studioProjectData.map((project, index) => (
               <ProjectCard
                 key={index}
                 imageUrl={project.imageUrl}

@@ -1,3 +1,4 @@
+import hillsMadeProjectImage from "../../../public/projectImages/hillsMade.png";
 export const sustainabilityData = [
   {
     id: 1,
@@ -23,5 +24,14 @@ export const sustainabilityData = [
     id: 5,
     stat: `30,261,174,232`,
     description: "Distance traveled by our parcels that we have compensated.",
+  },
+];
+
+export const studioProjectData = [
+  {
+    imageUrl: hillsMadeProjectImage,
+    linkUrl: "https://hillsmade.com/?ref=melriver",
+    headerText: "Hills",
+    paragraphText: "hillsmade.com",
   },
 ];
