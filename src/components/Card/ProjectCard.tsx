@@ -48,7 +48,7 @@ const ProjectCard = ({
           paused: true,
         });
         imageTween.current = gsap.to(imageRef.current, {
-          duration: 0.25,
+          duration: 0.35,
           ease: "power1.inOut",
           scale: 1.1,
           paused: true,
