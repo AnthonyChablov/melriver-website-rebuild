@@ -41,9 +41,9 @@ const ProjectCard = ({
     () => {
       if (projectCardRef.current && imageRef.current) {
         projectTween.current = gsap.to(projectCardRef.current, {
-          duration: 0.25,
+          duration: 0.35,
           ease: "power1.inOut",
-          rotate: "-1.5deg",
+          rotate: "-1.25deg",
           scale: 0.95,
           paused: true,
         });
@@ -63,7 +63,7 @@ const ProjectCard = ({
         overlayTween.current = gsap.to(overlayRef.current, {
           duration: 0.5,
           ease: "power1.out",
-          opacity: "20%",
+          opacity: "30%",
           paused: true,
         });
         subparagraphTween.current = gsap.to(subparagraphRef.current, {

@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center ">
       <Container className="md:flex md:justify-between md:space-x-10">
-        <section className="md:w-6/12 lg:w-6/12 mx-auto  text-center md:text-left h-full ">
+        <section className="md:w-6/12 lg:w-6/12   text-center md:text-left h-full ">
           <Spacer spaceingAmount={2} />
           <HeaderText
             text="We build outstanding brands."
