@@ -2,8 +2,8 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface ParagraphTextProps {
-  mode?: "sm" | "md" | "lg" | "xl" | "2xl";
-  text: string;
+  mode?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
+  text?: string;
   className?: string;
   children?: React.ReactNode;
 }
@@ -31,6 +31,9 @@ const ParagraphText = ({
       break;
     case "2xl":
       modeClass = "text-2xl";
+      break;
+    case "3xl":
+      modeClass = "text-3xl";
       break;
     default:
       modeClass = "text-base"; // Default to medium size if mode is not recognized

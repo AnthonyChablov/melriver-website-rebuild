@@ -7,7 +7,7 @@ interface SpacerProps {
   spaceingAmount?: string;
 }
 
-const Spacer = ({ spaceingAmount = `4`, className, children }: SpacerProps) => {
+const Spacer = ({ spaceingAmount, className, children }: SpacerProps) => {
   const spacing = `py-${spaceingAmount}`;
 
   return (

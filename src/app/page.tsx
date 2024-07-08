@@ -32,7 +32,7 @@ export default function Home() {
             text="We craft outstanding direct-to-consumer brands with the common ambition to offer true craftsmanship, timeless products that are carbon neutral – and this without ever making any concessions."
           />
         </section>
-        <Spacer spaceingAmount="8" />
+        <Spacer spaceingAmount="6" />
         <section className="">
           {projectData.map((project, index) => (
             <ProjectCard
@@ -44,12 +44,19 @@ export default function Home() {
             />
           ))}
         </section>
-        <Spacer />
+        <Spacer spaceingAmount="6" />
         <section className="">
           <ContentCard title={"Featured In"}>
             {/*           <Carousel />
              */}
           </ContentCard>
+        </section>
+        <Spacer spaceingAmount="6" />
+        <section className="">
+          <ContentCard
+            title={"Sustainability"}
+            description="A balance between social, environmental and financial interests."
+          ></ContentCard>
         </section>
       </Container>
     </main>

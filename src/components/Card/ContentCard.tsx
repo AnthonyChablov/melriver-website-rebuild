@@ -12,7 +12,7 @@ import HeaderText from "../Text/HeaderText";
 
 interface ContentCardProps {
   title: string; // ReactNode allows rendering of any JSX or text content
-  description?: ReactNode; // ReactNode allows rendering of any JSX or text content
+  description?: string; // ReactNode allows rendering of any JSX or text content
   footer?: ReactNode; // Optional footer
   children?: ReactNode;
 }
@@ -26,11 +26,20 @@ const ContentCard: React.FC<ContentCardProps> = ({
   return (
     <Card className="rounded-2xl ">
       <div className="text-center ">
-        <HeaderText
-          text={title}
-          mode="h2"
-          className="text-md py-6 font-semibold"
-        />
+        {title && (
+          <HeaderText
+            text={title}
+            mode="h2"
+            className="text-md py-6 font-semibold"
+          />
+        )}
+        {description && (
+          <ParagraphText
+            text={description}
+            mode="2xl"
+            className="font-semibold"
+          />
+        )}
       </div>
       <CardContent>{children}</CardContent>
       {footer && <CardFooter>{footer}</CardFooter>}
