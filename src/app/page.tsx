@@ -5,7 +5,7 @@ import ProjectCard from "@/components/Card/ProjectCard";
 import hillsMadeProjectImg from "./../../public/hills-made-project.png";
 import ContentCard from "@/components/Card/ContentCard";
 import Container from "@/components/Container";
-import Carousel from "./Carousel";
+import Carousel from "./_components/Carousel";
 
 const projectData = [
   {
@@ -56,7 +56,9 @@ export default function Home() {
           <ContentCard
             title={"Sustainability"}
             description="A balance between social, environmental and financial interests."
-          ></ContentCard>
+          >
+            123
+          </ContentCard>
         </section>
       </Container>
     </main>
