@@ -20,7 +20,7 @@ const ProjectCard = ({
   paragraphText,
 }: ProjectCardProps) => {
   return (
-    <Link href={linkUrl} passHref>
+    <Link href={linkUrl} passHref target="_blank">
       <div className="relative rounded-2xl overflow-hidden">
         <Image
           src={imageUrl}
