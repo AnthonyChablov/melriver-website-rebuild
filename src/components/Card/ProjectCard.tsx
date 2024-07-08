@@ -61,7 +61,7 @@ const ProjectCard = ({
           fill: "white",
         });
         overlayTween.current = gsap.to(overlayRef.current, {
-          duration: 0.5,
+          duration: 0.35,
           ease: "power1.out",
           opacity: "30%",
           paused: true,
