@@ -2,12 +2,17 @@ import React from "react";
 import ParagraphText from "./Text/ParagraphText";
 import Container from "./Container";
 import Spacer from "./Spacer";
+import { cn } from "@/lib/utils";
 
-const Footer = () => {
+interface FooterProps {
+  className?: string;
+}
+
+const Footer = ({ className }: FooterProps) => {
   return (
-    <footer className="">
+    <footer className={cn(`${className}`)}>
       <Spacer spaceingAmount={6} />
-      <Container className="text-left">
+      <Container className="text-left lg:w-full lg:p-0">
         <ParagraphText
           className="font-bold"
           mode="sm"
