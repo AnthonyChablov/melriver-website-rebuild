@@ -131,7 +131,7 @@ const ProjectCard = ({
           >
             <path
               fillRule="evenodd"
-              clip-rule="evenodd"
+              clipRule="evenodd"
               d="M38.5858 2L1.41422 2V0H41.4142V2V42H39.4142V4L1.41422 42L0 40.5858L38.5858 2Z"
             />
           </svg>

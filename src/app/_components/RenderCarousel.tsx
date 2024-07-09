@@ -19,10 +19,7 @@ const RenderCarousel = () => {
     <>
       <Carousel>
         {logos.map((logo, index) => (
-          <div
-            key={index}
-            className="flex justify-center items-center min-w-24 "
-          >
+          <div key={index} className="flex justify-center items-center  ">
             <Image
               src={logo.src}
               alt={logo.alt}

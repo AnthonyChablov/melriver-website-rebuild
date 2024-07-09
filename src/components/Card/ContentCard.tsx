@@ -25,7 +25,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
 }) => {
   return (
     <Card className="rounded-3xl shadow-sm overflow-hidden py-0">
-      <div className="text-center px-3 sm:container sm:px-10 w-11/12 mx-auto sm:max-w-2xl">
+      <div className="text-center px-3 sm:container sm:px-10 mx-auto sm:max-w-2xl w-full">
         {title && (
           <HeaderText
             text={title}
@@ -41,7 +41,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
           />
         )}
       </div>
-      <CardContent className="p-4 pb-12">{children}</CardContent>
+      <CardContent className="p-4 pb-12 ">{children}</CardContent>
       {footer && <CardFooter>{footer}</CardFooter>}
     </Card>
   );

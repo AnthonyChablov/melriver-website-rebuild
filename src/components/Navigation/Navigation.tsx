@@ -7,7 +7,7 @@ import Container from "../Container";
 
 const Navigation = () => {
   return (
-    <nav className="py-8 ">
+    <nav className="py-8 lg:sticky lg:top-0">
       <Container className="flex justify-between items-center">
         <Link href={"/"}>
           <ParagraphText text="Melriver" mode="2xl" className="font-medium" />
