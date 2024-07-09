@@ -17,14 +17,15 @@ const page = () => {
         <Container className="md:flex md:justify-between lg:justify-end md:space-x-10 lg:relative lg:w-full">
           <section
             className="md:w-6/12 lg:w-full lg:sticky lg:py-8 lg:top-0
-            text-center md:text-left flex flex-col h-screen justify-between"
+            text-center md:text-left flex flex-col lg:h-screen justify-between"
           >
-            <Navigation className="" />
+            <Navigation className="hidden lg:block" />
             <div className="">
               <Spacer spaceingAmount={2} />
               <HeaderText
                 text="Tailor-made Shopify stores."
-                className="text-5xl font-medium md:text-7xl"
+                mode="h1"
+                className="text-5xl xs:text-6xl font-medium sm:text-7xl w-full sm:w-10/12 mx-auto"
               />
               <Spacer spaceingAmount={4} />
               <ParagraphText
@@ -32,10 +33,10 @@ const page = () => {
                 text="We build state-of-the-art fashion, lifestyle, luxury eCommerce stores on Shopify & Shopify Plus by bridging the gap between branding and conversion."
               />
             </div>
-            <Footer className="" />
+            <Footer className="hidden lg:block" />
           </section>
           <section className=" md:w-5/12 lg:w-10/12 pb-14">
-            <NavigationLinks className=" py-8 justify-end" />
+            <NavigationLinks className=" py-8 justify-end hidden lg:block" />
             <Spacer spaceingAmount={8} className="md:hidden" />
             <div className=" flex flex-col space-y-9">
               {agencyProjectData.map((project, index) => (

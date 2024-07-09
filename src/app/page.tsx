@@ -20,10 +20,10 @@ export default function Home() {
         <Container className="md:flex md:justify-between lg:justify-end md:space-x-10 lg:relative lg:w-full">
           <section
             className="md:w-6/12 lg:w-full lg:sticky lg:py-8 top-0
-            text-center md:text-left flex flex-col h-screen justify-between"
+            text-center md:text-left flex flex-col lg:h-screen justify-between"
           >
-            <Navigation className="" />
-            <div className="pt-10">
+            <Navigation className="hidden lg:block" />
+            <div className="">
               <Spacer spaceingAmount={2} />
               <HeaderText
                 text="We build outstanding brands."
@@ -35,10 +35,10 @@ export default function Home() {
                 text="We craft outstanding direct-to-consumer brands with the common ambition to offer true craftsmanship, timeless products that are carbon neutral – and this without ever making any concessions."
               />
             </div>
-            <Footer className="" />
+            <Footer className="hidden lg:block" />
           </section>
           <section className=" md:w-5/12 lg:w-10/12 pb-14 ">
-            <NavigationLinks className=" py-8 justify-end" />
+            <NavigationLinks className=" py-8 justify-end hidden lg:block" />
             <Spacer spaceingAmount={8} className="md:hidden" />
             {studioProjectData.map((project, index) => (
               <ProjectCard
