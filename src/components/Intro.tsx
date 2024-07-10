@@ -13,7 +13,7 @@ const Intro = () => {
 
   useGSAP(
     () => {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("no-scroll");
       let tl = gsap.timeline({});
       tl.to(introRef.current, {
         display: "block",
@@ -55,8 +55,10 @@ const Intro = () => {
         );
       // Enable scroll after animation completes
       tl.eventCallback("onComplete", () => {
-        document.body.style.overflow = "auto";
+        document.body.classList.remove("no-scroll");
       });
+
+      return tl;
     },
     { scope: introRef }
   );
