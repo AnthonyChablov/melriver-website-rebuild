@@ -14,9 +14,12 @@ const page = () => {
     <>
       <Navigation className="md:hidden" />
       <main className="flex flex-col items-center justify-center ">
-        <Container className="md:flex sm:justify-between md:justify-end md:space-x-10 md:relative md:w-full">
+        <Container
+          className="md:flex sm:justify-between lg:justify-end 
+            md:space-x-10 md:relative md:w-full"
+        >
           <section
-            className=" md:w-full md:sticky md:py-8 md:top-0
+            className="  md:w-6/12 lg:w-full md:sticky md:py-8 md:top-0
             text-center md:text-left flex flex-col md:h-screen justify-between"
           >
             <Navigation className="hidden md:block" />
@@ -35,7 +38,7 @@ const page = () => {
             </div>
             <Footer className="hidden md:block" />
           </section>
-          <section className=" md:w-10/12 pb-14">
+          <section className=" md:w-6/12 lg:w-full pb-14">
             <div className="w-full flex justify-end">
               <NavigationLinks className="w-fit py-8 hidden md:block" />
             </div>
