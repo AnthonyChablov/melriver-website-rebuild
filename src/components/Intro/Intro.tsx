@@ -8,6 +8,7 @@ const Intro = () => {
   const firstLayerRef = useRef(null);
   const secondLayerRef = useRef(null);
   const mainLayerRef = useRef(null);
+  const paragraphRef = useRef(null);
 
   return (
     <div ref={introRef} className="relative">
@@ -21,9 +22,14 @@ const Intro = () => {
       ></div>
       <div
         ref={mainLayerRef}
-        className="h-screen flex bg-black justify-center place-items-center"
+        className="h-screen flex bg-black justify-center place-items-center absolute top-0 left-0"
       >
-        <ParagraphText text="Melriver" mode="4xl" className="font-medium" />
+        <ParagraphText
+          ref={paragraphRef}
+          text="Melriver"
+          mode="4xl"
+          className="font-medium"
+        />
       </div>
     </div>
   );
