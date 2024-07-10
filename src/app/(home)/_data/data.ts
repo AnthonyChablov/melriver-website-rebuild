@@ -1,4 +1,9 @@
 import hillsMadeProjectImage from "../../../../public/projectImages/hillsMade.png";
+import highSnobiety from "../../../../public/highsnobiety-logo-vector.svg";
+import gq from "../../../../public/gq-logo.svg";
+import productHunt from "../../../../public/product-hunt.svg";
+import elle from "../../../../public/elle-logo.svg";
+
 export const sustainabilityData = [
   {
     id: 1,
@@ -34,4 +39,11 @@ export const studioProjectData = [
     headerText: "Hills",
     paragraphText: "hillsmade.com",
   },
+];
+
+export const logos = [
+  { src: highSnobiety, alt: "High Snobiety Logo" },
+  { src: gq, alt: "GQ Logo" },
+  { src: productHunt, alt: "Product Hunt Logo" },
+  { src: elle, alt: "Elle Logo" },
 ];

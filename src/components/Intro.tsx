@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import ParagraphText from "../Text/ParagraphText";
+import ParagraphText from "./Text/ParagraphText";
 
 const Intro = () => {
   const introRef = useRef(null);

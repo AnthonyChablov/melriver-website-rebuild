@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 import HeroSection from "./_components/sections/AgencyHero";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer";
-import Intro from "@/components/Intro/Intro";
+import Intro from "@/components/Intro";
 import { Metadata } from "next";
 import ProjectSection from "./_components/sections/AgencyProject";
 

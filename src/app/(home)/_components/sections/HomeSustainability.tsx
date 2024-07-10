@@ -2,7 +2,7 @@ import React from "react";
 import Spacer from "@/components/Spacer";
 import ContentCard from "@/components/Card/ContentCard";
 import Info from "../Info";
-import RenderData from "../../../../components/Render/RenderData";
+import RenderData from "../../../../components/RenderData";
 import { sustainabilityData } from "@/app/(home)/_data/data";
 
 const SustainabilitySection: React.FC = () => {

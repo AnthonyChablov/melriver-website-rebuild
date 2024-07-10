@@ -2,7 +2,7 @@ import React from "react";
 import Spacer from "@/components/Spacer";
 import ProjectCard from "@/components/Card/ProjectCard";
 import { studioProjectData } from "@/app/(home)/_data/data";
-import RenderData from "../../../../components/Render/RenderData";
+import RenderData from "../../../../components/RenderData";
 
 const ProjectSection: React.FC = () => {
   return (

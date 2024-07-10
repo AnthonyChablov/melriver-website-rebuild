@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@/components/Container";
-import Intro from "@/components/Intro/Intro";
+import Intro from "@/components/Intro";
 import Navigation from "@/components/Navigation/Navigation";
 import NavigationLinks from "@/components/Navigation/NavigationLinks";
 import Spacer from "@/components/Spacer";
@@ -32,6 +32,7 @@ const Home: React.FC = () => {
             <Spacer spaceingAmount={8} className="md:hidden" />
             <ProjectSection />
             <FeaturedSection />
+            <Spacer spaceingAmount={8} className="" />
             <SustainabilitySection />
           </div>
         </Container>
