@@ -18,6 +18,7 @@ const Intro = () => {
         y: "100%",
         duration: 0.5,
         ease: "power2.inOut",
+        display: "none",
       })
         .to(secondLayerRef.current, {
           y: "100%",
