@@ -28,7 +28,7 @@ const page = () => {
               <HeaderText
                 text="Tailor-made Shopify stores."
                 mode="h1"
-                className="text-5xl xs:text-6xl font-medium sm:text-7xl w-full  mx-auto"
+                className="text-5xl xs:text-6xl font-medium lg:text-7xl w-full  mx-auto"
               />
               <Spacer spaceingAmount={4} />
               <ParagraphText
