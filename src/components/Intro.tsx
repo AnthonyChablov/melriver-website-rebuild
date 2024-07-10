@@ -13,6 +13,7 @@ const Intro = () => {
 
   useGSAP(
     () => {
+      document.body.style.overflow = "hidden";
       let tl = gsap.timeline({});
       tl.to(introRef.current, {
         display: "block",
@@ -52,6 +53,10 @@ const Intro = () => {
           },
           "<"
         );
+      // Enable scroll after animation completes
+      tl.eventCallback("onComplete", () => {
+        document.body.style.overflow = "auto";
+      });
     },
     { scope: introRef }
   );
@@ -69,7 +74,7 @@ const Intro = () => {
       <div
         ref={mainLayerRef}
         className="h-screen w-full flex bg-black justify-center 
-          items-center  top-0 left-0 z-0 "
+          items-center top-0 left-0 z-0 "
       >
         <ParagraphText
           ref={paragraphRef}
