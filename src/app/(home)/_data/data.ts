@@ -1,4 +1,4 @@
-import hillsMadeProjectImage from "../../../public/projectImages/hillsMade.png";
+import hillsMadeProjectImage from "../../../../public/projectImages/hillsMade.png";
 export const sustainabilityData = [
   {
     id: 1,

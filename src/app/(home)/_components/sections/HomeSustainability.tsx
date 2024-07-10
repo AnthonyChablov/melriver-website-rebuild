@@ -2,8 +2,8 @@ import React from "react";
 import Spacer from "@/components/Spacer";
 import ContentCard from "@/components/Card/ContentCard";
 import Info from "../Info";
-import RenderData from "../RenderData";
-import { sustainabilityData } from "@/app/_lib/data";
+import RenderData from "../../../../components/Render/RenderData";
+import { sustainabilityData } from "@/app/(home)/_data/data";
 
 const SustainabilitySection: React.FC = () => {
   return (

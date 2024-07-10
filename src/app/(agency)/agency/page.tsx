@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import ParagraphText from "@/components/Text/ParagraphText";
 import ProjectCard from "@/components/Card/ProjectCard";
-import { agencyProjectData } from "./_lib/data";
+import { agencyProjectData } from "./_data/data";
 import NavigationLinks from "@/components/Navigation/NavigationLinks";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer";

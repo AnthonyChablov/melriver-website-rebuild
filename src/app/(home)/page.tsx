@@ -3,11 +3,12 @@ import Container from "@/components/Container";
 import Intro from "@/components/Intro/Intro";
 import Navigation from "@/components/Navigation/Navigation";
 import NavigationLinks from "@/components/Navigation/NavigationLinks";
+import Spacer from "@/components/Spacer";
 import Footer from "@/components/Footer";
-import HeroSection from "./_components/Sections/HeroSection";
-import ProjectSection from "./_components/Sections/ProjectSection";
-import SustainabilitySection from "./_components/Sections/SustainabilitySection";
-import FeaturedSection from "./_components/Sections/FeaturedSection";
+import HeroSection from "./_components/sections/HomeHero";
+import ProjectSection from "./_components/sections/HomeProject";
+import SustainabilitySection from "./_components/sections/HomeSustainability";
+import FeaturedSection from "./_components/sections/HomeFeatured";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
             <div className="w-full flex justify-end">
               <NavigationLinks className="w-fit py-8 hidden md:block" />
             </div>
+            <Spacer spaceingAmount={8} className="md:hidden" />
             <ProjectSection />
             <FeaturedSection />
             <SustainabilitySection />

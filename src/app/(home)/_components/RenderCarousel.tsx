@@ -2,10 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import Carousel from "./Carousel";
-import highSnobiety from "../../../public/highsnobiety-logo-vector.svg";
-import gq from "../../../public/gq-logo.svg";
-import productHunt from "../../../public/product-hunt.svg";
-import elle from "../../../public/elle-logo.svg";
+import highSnobiety from "../../../../public/highsnobiety-logo-vector.svg";
+import gq from "../../../../public/gq-logo.svg";
+import productHunt from "../../../../public/product-hunt.svg";
+import elle from "../../../../public/elle-logo.svg";
 
 const logos = [
   { src: highSnobiety, alt: "High Snobiety Logo" },
