@@ -15,19 +15,20 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Navigation className="lg:hidden" />
+      <Navigation className="md:hidden" />
       <main className="flex flex-col items-center justify-center ">
-        <Container className="md:flex md:justify-between lg:justify-end md:space-x-10 lg:relative lg:w-full">
+        <Container className="md:flex sm:justify-between md:justify-end md:space-x-10 md:relative md:w-full">
           <section
-            className="md:w-6/12 lg:w-full lg:sticky lg:py-8 top-0
-            text-center md:text-left flex flex-col lg:h-screen justify-between"
+            className="md:w-full md:sticky md:py-8 md:top-0
+            text-center md:text-left flex flex-col md:h-screen justify-between"
           >
-            <Navigation className="hidden lg:block" />
+            <Navigation className="hidden md:block" />
             <div className="">
               <Spacer spaceingAmount={2} />
               <HeaderText
-                text="We build outstanding brands."
-                className="text-5xl font-medium md:text-7xl "
+                text="We build outstanding brands. "
+                mode="h1"
+                className="text-5xl xs:text-6xl font-medium sm:text-7xl w-full  mx-auto"
               />
               <Spacer spaceingAmount={4} />
               <ParagraphText
@@ -35,10 +36,13 @@ export default function Home() {
                 text="We craft outstanding direct-to-consumer brands with the common ambition to offer true craftsmanship, timeless products that are carbon neutral – and this without ever making any concessions."
               />
             </div>
-            <Footer className="hidden lg:block" />
+            <Footer className="hidden md:block" />
           </section>
-          <section className=" md:w-5/12 lg:w-10/12 pb-14 ">
-            <NavigationLinks className=" py-8 justify-end hidden lg:block" />
+          <section className="  md:w-10/12 pb-14 ">
+            <div className="w-full flex justify-end">
+              <NavigationLinks className="w-fit py-8 hidden md:block" />
+            </div>
+
             <Spacer spaceingAmount={8} className="md:hidden" />
             {studioProjectData.map((project, index) => (
               <ProjectCard
@@ -76,7 +80,7 @@ export default function Home() {
             </ContentCard>
           </section>
         </Container>
-        <Footer className="lg:hidden" />
+        <Footer className="md:hidden" />
       </main>
     </>
   );

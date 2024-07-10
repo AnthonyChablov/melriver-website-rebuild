@@ -10,9 +10,9 @@ interface FooterProps {
 
 const Footer = ({ className }: FooterProps) => {
   return (
-    <footer className={cn(`${className}`)}>
+    <footer className={cn(`${className} w-full `)}>
       <Spacer spaceingAmount={6} />
-      <Container className="text-left lg:w-full lg:p-0">
+      <Container className="text-left lg:p-0">
         <ParagraphText
           className="font-bold"
           mode="sm"

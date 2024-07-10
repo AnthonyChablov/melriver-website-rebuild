@@ -12,13 +12,13 @@ interface NavigationProps {
 
 const Navigation = ({ className }: NavigationProps) => {
   return (
-    <nav className={cn(`py-8 lg:py-0 lg:top-0 ${className}`)}>
-      <Container className="flex justify-between items-center lg:w-full lg:p-0">
+    <nav className={cn(`py-8 md:py-0 md:top-0 ${className}`)}>
+      <Container className="flex justify-between items-center md:w-full lg:p-0">
         <Link href={"/"}>
           <ParagraphText text="Melriver" mode="2xl" className="font-medium" />
         </Link>
         {/* Multi Button */}
-        <NavigationLinks className="lg:hidden" />
+        <NavigationLinks className="md:hidden" />
       </Container>
     </nav>
   );
