@@ -102,7 +102,7 @@ const ProjectCard = ({
       onMouseLeave={onMouseLeave}
     >
       <div
-        className="relative rounded-2xl overflow-hidden"
+        className="relative rounded-2xl overflow-hidden shadow-md"
         ref={projectCardRef}
       >
         <Image
