@@ -14,17 +14,38 @@ const Intro = () => {
   useGSAP(
     () => {
       let tl = gsap.timeline({});
-      tl.fromTo(
-        firstLayerRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 1 }
-      )
-        .to(secondLayerRef.current, { y: "100%", duration: 1 }, "+=0.5")
-        .to(mainLayerRef.current, { y: "100%", duration: 1 }, "+=0.5")
+      tl.to(firstLayerRef.current, {
+        y: "100%",
+        duration: 0.5,
+        ease: "power2.inOut",
+      })
+        .to(secondLayerRef.current, {
+          y: "100%",
+          duration: 0.5,
+          ease: "power2.inOut",
+        })
         .to(
-          [firstLayerRef.current, secondLayerRef.current, mainLayerRef.current],
-          { opacity: 0, duration: 1 },
-          "+=0.5"
+          introRef.current,
+          {
+            height: 0,
+            duration: 0.75,
+            opacity: 0,
+            y: "-100%",
+            ease: "power2.inOut",
+          },
+          "+=.5"
+        )
+        .to(
+          mainLayerRef.current,
+          {
+            height: 0,
+            duration: 0.75,
+            background: "white",
+            opacity: 0,
+            y: "-100%",
+            ease: "power2.inOut",
+          },
+          "<"
         );
     },
     { scope: introRef }
@@ -34,7 +55,7 @@ const Intro = () => {
     <div ref={introRef} className="relative">
       <div
         ref={firstLayerRef}
-        className="h-screen w-full bg-black absolute top-0 left-0 z-0"
+        className="h-screen w-full bg-black absolute top-0 left-0 z-20"
       ></div>
       <div
         ref={secondLayerRef}
@@ -43,7 +64,7 @@ const Intro = () => {
       <div
         ref={mainLayerRef}
         className="h-screen w-full flex bg-black justify-center 
-          items-center absolute top-0 left-0 z-20"
+          items-center  top-0 left-0 z-0 "
       >
         <ParagraphText
           ref={paragraphRef}
