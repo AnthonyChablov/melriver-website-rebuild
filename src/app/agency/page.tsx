@@ -9,6 +9,13 @@ import NavigationLinks from "@/components/Navigation/NavigationLinks";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer";
 import Intro from "@/components/Intro/Intro";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Melriver Agency – Tailor-made Shopify stores",
+  description:
+    "We build state-of-the-art fashion, lifestyle, luxury eCommerce stores on Shopify & Shopify Plus by bridging the gap between branding and conversion.",
+};
 
 const page = () => {
   return (
