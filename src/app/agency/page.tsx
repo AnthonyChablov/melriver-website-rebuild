@@ -8,10 +8,12 @@ import { agencyProjectData } from "./_lib/data";
 import NavigationLinks from "@/components/Navigation/NavigationLinks";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer";
+import Intro from "@/components/Intro/Intro";
 
 const page = () => {
   return (
     <>
+      <Intro />
       <Navigation className="md:hidden" />
       <main className="flex flex-col items-center justify-center ">
         <Container
@@ -43,7 +45,7 @@ const page = () => {
               <NavigationLinks className="w-fit py-8 hidden md:block" />
             </div>
             <Spacer spaceingAmount={8} className="md:hidden" />
-            <div className=" flex flex-col space-y-9">
+            <div className=" flex flex-col space-y-9 ">
               {agencyProjectData.map((project, index) => (
                 <ProjectCard
                   key={index}

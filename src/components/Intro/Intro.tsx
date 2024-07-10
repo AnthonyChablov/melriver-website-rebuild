@@ -14,12 +14,15 @@ const Intro = () => {
   useGSAP(
     () => {
       let tl = gsap.timeline({});
-      tl.to(firstLayerRef.current, {
-        y: "100%",
-        duration: 0.5,
-        ease: "power2.inOut",
-        display: "none",
+      tl.to(introRef.current, {
+        display: "block",
       })
+        .to(firstLayerRef.current, {
+          y: "100%",
+          duration: 0.5,
+          ease: "power2.inOut",
+          display: "none",
+        })
         .to(secondLayerRef.current, {
           y: "100%",
           duration: 0.5,
@@ -29,7 +32,8 @@ const Intro = () => {
           introRef.current,
           {
             height: 0,
-            duration: 0.75,
+            display: "none",
+            duration: 1,
             opacity: 0,
             y: "-100%",
             ease: "power2.inOut",
@@ -40,7 +44,7 @@ const Intro = () => {
           mainLayerRef.current,
           {
             height: 0,
-            duration: 0.75,
+            duration: 1,
             background: "white",
             opacity: 0,
             y: "-100%",
@@ -53,7 +57,7 @@ const Intro = () => {
   );
 
   return (
-    <div ref={introRef} className="relative">
+    <div ref={introRef} className="relative hidden md:block">
       <div
         ref={firstLayerRef}
         className="h-screen w-full bg-black absolute top-0 left-0 z-20"

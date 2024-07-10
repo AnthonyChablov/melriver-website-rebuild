@@ -11,10 +11,13 @@ import NavigationLinks from "@/components/Navigation/NavigationLinks";
 import RenderCarousel from "./_components/RenderCarousel";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer";
+import RenderData from "./_components/RenderData";
+import Intro from "@/components/Intro/Intro";
 
 export default function Home() {
   return (
     <>
+      <Intro />
       <Navigation className="md:hidden" />
       <main className="flex flex-col items-center justify-center ">
         <Container
@@ -45,17 +48,18 @@ export default function Home() {
             <div className="w-full flex justify-end">
               <NavigationLinks className="w-fit py-8 hidden md:block" />
             </div>
-
             <Spacer spaceingAmount={8} className="md:hidden" />
-            {studioProjectData.map((project, index) => (
-              <ProjectCard
-                key={index}
-                imageUrl={project.imageUrl}
-                linkUrl={project.linkUrl}
-                headerText={project.headerText}
-                paragraphText={project.paragraphText}
-              />
-            ))}
+            <RenderData data={studioProjectData}>
+              {(project, index) => (
+                <ProjectCard
+                  key={index}
+                  imageUrl={project.imageUrl}
+                  linkUrl={project.linkUrl}
+                  headerText={project.headerText}
+                  paragraphText={project.paragraphText}
+                />
+              )}
+            </RenderData>
             <Spacer spaceingAmount={6} />
             <ContentCard title={"Featured In"}>
               <RenderCarousel />
@@ -67,18 +71,20 @@ export default function Home() {
             >
               <Spacer spaceingAmount={4} />
               <div className="flex flex-col xs:grid xs:grid-cols-2 gap-x-5 gap-y-4 ">
-                {sustainabilityData.map((item, index) => (
-                  <Info
-                    key={item.id}
-                    title={item.stat}
-                    description={item.description}
-                    className={
-                      index === sustainabilityData.length - 1
-                        ? "col-span-2"
-                        : ""
-                    }
-                  />
-                ))}
+                <RenderData data={sustainabilityData}>
+                  {(item, index) => (
+                    <Info
+                      key={item.id}
+                      title={item.stat}
+                      description={item.description}
+                      className={
+                        index === sustainabilityData.length - 1
+                          ? "col-span-2"
+                          : ""
+                      }
+                    />
+                  )}
+                </RenderData>
               </div>
             </ContentCard>
           </section>
