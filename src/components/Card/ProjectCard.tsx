@@ -105,15 +105,15 @@ const ProjectCard = ({
         className="relative rounded-2xl overflow-hidden shadow-md"
         ref={projectCardRef}
       >
-        <Image
-          ref={imageRef}
-          src={imageUrl}
-          alt="Project Image"
-          layout="responsive"
-          width={400}
-          height={400}
-          className="object-cover"
-        />
+        <div className="relative h-[500px]">
+          <Image
+            className="object-cover object-center w-full h-full"
+            ref={imageRef}
+            src={imageUrl}
+            alt="Project Image"
+            placeholder="blur"
+          />
+        </div>
         {/* Faded Overlay */}
         <div
           className="absolute inset-0 bg-black opacity-5 rounded-lg"
