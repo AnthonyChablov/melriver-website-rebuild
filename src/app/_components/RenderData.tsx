@@ -7,11 +7,11 @@ interface RenderDataProps {
 
 const RenderData: React.FC<RenderDataProps> = ({ data, children }) => {
   return (
-    <div>
+    <>
       {data.map((item, index) => (
         <React.Fragment key={index}>{children(item, index)}</React.Fragment>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -26,7 +26,7 @@ export default function Home() {
         >
           <section
             className=" md:w-6/12 lg:w-full md:sticky md:py-8 md:top-0
-              text-center md:text-left flex flex-col md:h-screen justify-between"
+              text-center md:text-left flex flex-col md:h-screen justify-between "
           >
             <Navigation className="hidden md:block" />
             <div className="">
