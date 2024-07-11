@@ -24,7 +24,6 @@ const Footer = ({ className }: FooterProps) => {
           text="‍No cookie Policy. No privacy policy."
         />
       </Container>
-      <Spacer spaceingAmount={4} />
     </footer>
   );
 };

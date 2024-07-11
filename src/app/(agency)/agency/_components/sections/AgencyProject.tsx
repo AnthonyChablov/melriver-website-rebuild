@@ -6,7 +6,7 @@ import ProjectCard from "@/components/Card/ProjectCard";
 
 const ProjectSection = () => {
   return (
-    <section className=" md:w-6/12 lg:w-full pb-14">
+    <section className=" md:w-6/12 lg:w-full ">
       <div className="w-full flex justify-end">
         <NavigationLinks className="w-fit py-8 hidden md:block" />
       </div>
@@ -22,6 +22,7 @@ const ProjectSection = () => {
           />
         ))}
       </div>
+      <Spacer spaceingAmount={4} />
     </section>
   );
 };
