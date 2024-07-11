@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ParagraphText from "./Text/ParagraphText";
-import useIntroAnimation from "@/hooks/useIntroAnimation";
 
 const Intro = () => {
   const introRef = useRef(null);
@@ -11,67 +10,60 @@ const Intro = () => {
   const secondLayerRef = useRef(null);
   const mainLayerRef = useRef(null);
   const paragraphRef = useRef(null);
-  const shouldAnimate = useIntroAnimation();
 
   useGSAP(
     () => {
-      if (shouldAnimate) {
-        document.body.classList.add("no-scroll");
-        let tl = gsap.timeline({});
-        tl.to(introRef.current, {
-          display: "block",
-          visibility: "visible",
+      document.body.classList.add("no-scroll");
+      let tl = gsap.timeline({});
+      tl.to(introRef.current, {
+        display: "block",
+        visibility: "visible",
+      })
+        .to(firstLayerRef.current, {
+          y: "100%",
+          duration: 0.5,
+          ease: "power2.inOut",
+          display: "none",
+          visibility: "invisible",
         })
-          .to(firstLayerRef.current, {
-            y: "100%",
-            duration: 0.5,
-            ease: "power2.inOut",
+        .to(secondLayerRef.current, {
+          y: "100%",
+          duration: 0.5,
+          ease: "power2.inOut",
+        })
+        .to(
+          introRef.current,
+          {
+            height: 0,
             display: "none",
-            visibility: "invisible",
-          })
-          .to(secondLayerRef.current, {
-            y: "100%",
-            duration: 0.5,
+            duration: 1,
+            opacity: 0,
+            y: "-100%",
             ease: "power2.inOut",
-          })
-          .to(
-            introRef.current,
-            {
-              height: 0,
-              display: "none",
-              duration: 1,
-              opacity: 0,
-              y: "-100%",
-              ease: "power2.inOut",
-            },
-            "+=.5"
-          )
-          .to(
-            mainLayerRef.current,
-            {
-              height: 0,
-              duration: 1,
-              background: "white",
-              opacity: 0,
-              y: "-100%",
-              ease: "power2.inOut",
-            },
-            "<"
-          );
-        // Enable scroll after animation completes
-        tl.eventCallback("onComplete", () => {
-          document.body.classList.remove("no-scroll");
-        });
+          },
+          "+=.5"
+        )
+        .to(
+          mainLayerRef.current,
+          {
+            height: 0,
+            duration: 1,
+            background: "white",
+            opacity: 0,
+            y: "-100%",
+            ease: "power2.inOut",
+          },
+          "<"
+        );
+      // Enable scroll after animation completes
+      tl.eventCallback("onComplete", () => {
+        document.body.classList.remove("no-scroll");
+      });
 
-        return tl;
-      }
+      return tl;
     },
     { scope: introRef }
   );
-
-  if (!shouldAnimate) {
-    return null; // Don't render the component if the animation shouldn't play
-  }
 
   return (
     <div ref={introRef} className="relative invisible md:block">
