@@ -17,12 +17,14 @@ const Intro = () => {
       let tl = gsap.timeline({});
       tl.to(introRef.current, {
         display: "block",
+        visibility: "visible",
       })
         .to(firstLayerRef.current, {
           y: "100%",
           duration: 0.5,
           ease: "power2.inOut",
           display: "none",
+          visibility: "invisible",
         })
         .to(secondLayerRef.current, {
           y: "100%",
@@ -64,7 +66,7 @@ const Intro = () => {
   );
 
   return (
-    <div ref={introRef} className="relative hidden md:block">
+    <div ref={introRef} className="relative invisible md:block">
       <div
         ref={firstLayerRef}
         className="h-screen w-full bg-black absolute top-0 left-0 z-20"
