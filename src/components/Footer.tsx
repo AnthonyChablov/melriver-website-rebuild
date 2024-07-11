@@ -12,7 +12,7 @@ const Footer = ({ className }: FooterProps) => {
   return (
     <footer className={cn(`${className} w-full `)}>
       <Spacer spaceingAmount={6} />
-      <Container className="text-left lg:p-0">
+      <Container className="text-left lg:p-0 md:p-0">
         <ParagraphText
           className="font-bold"
           mode="sm"
