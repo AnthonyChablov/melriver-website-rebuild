@@ -34,6 +34,19 @@ A live demo of the project can be found [here](#).
 ## Installation
 
 1. Clone the repository:
-   ````git clone https://github.com/yourusername/melriver-recreation.git
-   cd melriver-recreation```
-   ````
+
+   `git clone https://github.com/your/repository.git`
+   `cd repository-name`
+
+2. Install dependencies:
+
+   `npm install`
+
+3. Start the development server:
+   `npm run dev`
+
+4. Open your browser and navigate to http://localhost:3000 to view the website.
+
+## Contributing
+
+Feel free to contribute to this project by submitting issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
