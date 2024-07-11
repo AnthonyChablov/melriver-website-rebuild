@@ -13,13 +13,13 @@ const FeaturedSection: React.FC = () => {
         <Carousel>
           <RenderData data={logos}>
             {(logo, index) => (
-              <div key={index} className="flex justify-center items-center  ">
+              <div key={index} className="flex justify-center items-center">
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={150}
-                  height={150}
-                  className="object-contain" // Ensures image scales appropriately
+                  width={500}
+                  height={500}
+                  className="object-contain"
                 />
               </div>
             )}

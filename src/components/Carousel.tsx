@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -18,23 +18,20 @@ const Carousel = ({ children }: CarouselProps) => {
   useGSAP(
     () => {
       const tl = gsap.timeline({ repeat: -1, paused: true });
-      const wrap = gsap.utils.wrap(-100, 200);
+      const wrapWidth = carousel.current?.scrollWidth || 0;
+      const parentWidth = carousel.current?.parentElement?.offsetWidth || 0;
 
       tl.fromTo(
         carousel.current,
         {
           ease: "none",
-          x: "120%",
-          visibility: `hidden`,
+          x: parentWidth,
+          visibility: `visible`,
         },
         {
-          duration: 25,
-          visibility: `visible`,
+          duration: 20,
+          x: -wrapWidth,
           ease: "none",
-          x: "-=300%", //move each box 500% to right
-          modifiers: {
-            y: gsap.utils.unitize(wrap), //force y value to wrap when it reaches -100
-          },
         }
       );
 
@@ -48,7 +45,10 @@ const Carousel = ({ children }: CarouselProps) => {
   );
 
   return (
-    <div ref={carousel} className="space-x-12 invisible flex ">
+    <div
+      ref={carousel}
+      className="space-x-10 overflow-hidden h-full w-[600px] md:w-full flex"
+    >
       {children}
     </div>
   );
