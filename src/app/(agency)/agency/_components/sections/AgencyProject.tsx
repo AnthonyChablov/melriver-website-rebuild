@@ -2,6 +2,7 @@ import React from "react";
 import NavigationLinks from "@/components/Navigation/NavigationLinks";
 import Spacer from "@/components/Spacer";
 import { agencyProjectData } from "../../_data/data";
+import RenderData from "@/components/RenderData";
 import ProjectCard from "@/components/Card/ProjectCard";
 
 const ProjectSection = () => {
@@ -12,15 +13,17 @@ const ProjectSection = () => {
       </div>
       <Spacer spaceingAmount={8} className="md:hidden" />
       <div className=" flex flex-col space-y-9 ">
-        {agencyProjectData.map((project, index) => (
-          <ProjectCard
-            key={index}
-            imageUrl={project.imageUrl}
-            linkUrl={project.linkUrl}
-            headerText={project.headerText}
-            paragraphText={project.paragraphText}
-          />
-        ))}
+        <RenderData data={agencyProjectData}>
+          {(project, index) => (
+            <ProjectCard
+              key={index}
+              imageUrl={project.imageUrl}
+              linkUrl={project.linkUrl}
+              headerText={project.headerText}
+              paragraphText={project.paragraphText}
+            />
+          )}
+        </RenderData>
       </div>
       <Spacer spaceingAmount={4} />
     </section>
