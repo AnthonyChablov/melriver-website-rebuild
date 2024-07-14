@@ -35,8 +35,8 @@ A live demo of the project can be found [here](#).
 
 1. Clone the repository:
 
-   `git clone https://github.com/your/repository.git`
-   `cd repository-name`
+   `git clone https://github.com/AnthonyChablov/melriver-website-rebuild.git`
+   `cd melriver-website-rebuild`
 
 2. Install dependencies:
 
